@@ -19,7 +19,7 @@ Create ordered arrays using C with a fast and unique hybrid sorting algorithm.
 - Optimal for large inputs
 - Optimal for both pre-sorted best cases and shuffled worst cases
 - Predetermined high and low numbers not required
-- Reverses sort order quickly
+- Reverses pre-sorted order in a single loop pass
 - Variants for both signed and unsigned data types
 - Variants for both ascending and descending sort order
 
