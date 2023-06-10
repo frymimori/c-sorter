@@ -1,10 +1,11 @@
 ## C Sorter
 
 #### Description
-Create ordered arrays using C with a fast and unique hybrid sorting algorithm.
+Create ascending and descending ordered arrays using C with a fast and unique hybrid sorting algorithm.
 
 - All integral data types supported
 - Allocates memory without dynamic memory allocation functions
+- Allows freeing 5-16 bytes of unreferenced variable memory after first loop pass
 - Approximately 3x faster than bubble sort with 5x fewer loop iterations
 - Compiles with forward-compatible `C89`
 - Conforms to strict ISO C with `-pedantic-errors` enabled

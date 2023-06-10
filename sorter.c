@@ -30,28 +30,23 @@ void sorterB(unsigned long a, unsigned long * b) {
 		}
 	}
 
-	a = c;
-	e = 0;
+	d = 0;
 
-	while (e == 0) {
+	while (d == 0) {
+		a = c;
+
 		while (a != 1) {
 			a--;
 
 			if (b[a] < b[a - 1]) {
-				d = a - 1;
-				f = b[d];
-				b[d] = b[a];
-				b[a] = f;
-				e = 1;
+				d = b[a];
+				b[a] = b[a - 1];
+				b[a - 1] = d;
+				d = 1;
 			}
 		}
 
-		if (e == 1) {
-			a = c;
-			e = 0;
-		} else {
-			e = 1;
-		}
+		d ^= 1;
 	}
 
 	return;
@@ -89,28 +84,23 @@ void sorterD(unsigned long a, unsigned int * b) {
 		}
 	}
 
-	a = c;
-	e = 0;
+	d = 0;
 
-	while (e == 0) {
+	while (d == 0) {
+		a = c;
+
 		while (a != 1) {
 			a--;
 
 			if (b[a] < b[a - 1]) {
-				d = a - 1;
-				f = b[d];
-				b[d] = b[a];
-				b[a] = f;
-				e = 1;
+				d = b[a];
+				b[a] = b[a - 1];
+				b[a - 1] = d;
+				d = 1;
 			}
 		}
 
-		if (e == 1) {
-			a = c;
-			e = 0;
-		} else {
-			e = 1;
-		}
+		d ^= 1;
 	}
 
 	return;
@@ -148,28 +138,23 @@ void sorterF(unsigned long a, unsigned short * b) {
 		}
 	}
 
-	a = c;
-	e = 0;
+	d = 0;
 
-	while (e == 0) {
+	while (d == 0) {
+		a = c;
+
 		while (a != 1) {
 			a--;
 
 			if (b[a] < b[a - 1]) {
-				d = a - 1;
-				f = b[d];
-				b[d] = b[a];
-				b[a] = f;
-				e = 1;
+				d = b[a];
+				b[a] = b[a - 1];
+				b[a - 1] = d;
+				d = 1;
 			}
 		}
 
-		if (e == 1) {
-			a = c;
-			e = 0;
-		} else {
-			e = 1;
-		}
+		d ^= 1;
 	}
 
 	return;
@@ -207,28 +192,23 @@ void sorterH(unsigned long a, unsigned char * b) {
 		}
 	}
 
-	a = c;
-	e = 0;
+	d = 0;
 
-	while (e == 0) {
+	while (d == 0) {
+		a = c;
+
 		while (a != 1) {
 			a--;
 
 			if (b[a] < b[a - 1]) {
-				d = a - 1;
-				f = b[d];
-				b[d] = b[a];
-				b[a] = f;
-				e = 1;
+				d = b[a];
+				b[a] = b[a - 1];
+				b[a - 1] = d;
+				d = 1;
 			}
 		}
 
-		if (e == 1) {
-			a = c;
-			e = 0;
-		} else {
-			e = 1;
-		}
+		d ^= 1;
 	}
 
 	return;
@@ -266,28 +246,23 @@ void sorterJ(unsigned long a, double * b) {
 		}
 	}
 
-	a = c;
-	e = 0;
+	d = 0;
 
-	while (e == 0) {
+	while (d == 0) {
+		a = c;
+
 		while (a != 1) {
 			a--;
 
 			if (b[a] < b[a - 1]) {
-				d = a - 1;
-				f = b[d];
-				b[d] = b[a];
-				b[a] = f;
-				e = 1;
+				d = b[a];
+				b[a] = b[a - 1];
+				b[a - 1] = d;
+				d = 1;
 			}
 		}
 
-		if (e == 1) {
-			a = c;
-			e = 0;
-		} else {
-			e = 1;
-		}
+		d ^= 1;
 	}
 
 	return;
