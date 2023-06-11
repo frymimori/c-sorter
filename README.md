@@ -11,14 +11,15 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 - Conforms to strict ISO C with `-pedantic-errors` enabled
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
+- Iterative and procedural sorting with a single function call
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
 - More optimal alternative to merge sort, quicksort and novel sorting algorithms
 - No mean or median numbers calculated
 - No recursive subfunctions
-- No redundant merged numbers in memory
-- Optimal for large inputs
+- No redundant branched or merged numbers in memory
 - Optimal for both pre-sorted best cases and shuffled worst cases
+- Optimal for large inputs
 - Predetermined high and low numbers not required
 - Reverses pre-sorted order in a single loop pass
 - Variants for both signed and unsigned data types

@@ -1,4 +1,50 @@
 void sorterA(unsigned long a, unsigned long * b) {
+	unsigned long c = a;
+	unsigned long d;
+	unsigned long e;
+	unsigned long f;
+
+	while (a != 1) {
+		a--;
+
+		if (b[a] > b[a - 1]) {
+			d = a - 1;
+			e = d;
+			f = b[d];
+
+			while (d != 0) {
+				d--;
+
+				if (b[d] < f) {
+					f = b[d];
+					e = d;
+				}
+			}
+
+			b[e] = b[a];
+			b[a] = f;
+		}
+	}
+
+	d = 0;
+
+	while (d == 0) {
+		a = c;
+
+		while (a != 1) {
+			a--;
+
+			if (b[a] > b[a - 1]) {
+				d = b[a];
+				b[a] = b[a - 1];
+				b[a - 1] = d;
+				d = 1;
+			}
+		}
+
+		d ^= 1;
+	}
+
 	return;
 }
 
