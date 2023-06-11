@@ -17,28 +17,32 @@ void sorterG(unsigned long a, unsigned char * b);
 
 void sorterH(unsigned long a, unsigned char * b);
 
-void sorterI(unsigned long a, double * b);
+void sorterI(unsigned long a, long double * b);
 
-void sorterJ(unsigned long a, double * b);
+void sorterJ(unsigned long a, long double * b);
 
-void sorterK(unsigned long a, float * b);
+void sorterK(unsigned long a, double * b);
 
-void sorterL(unsigned long a, float * b);
+void sorterL(unsigned long a, double * b);
 
-void sorterM(unsigned long a, long * b);
+void sorterM(unsigned long a, float * b);
 
-void sorterN(unsigned long a, long * b);
+void sorterN(unsigned long a, float * b);
 
-void sorterO(unsigned long a, int * b);
+void sorterO(unsigned long a, long * b);
 
-void sorterP(unsigned long a, int * b);
+void sorterP(unsigned long a, long * b);
 
-void sorterQ(unsigned long a, short * b);
+void sorterQ(unsigned long a, int * b);
 
-void sorterR(unsigned long a, short * b);
+void sorterR(unsigned long a, int * b);
 
-void sorterS(unsigned long a, char * b);
+void sorterS(unsigned long a, short * b);
 
-void sorterT(unsigned long a, char * b);
+void sorterT(unsigned long a, short * b);
+
+void sorterU(unsigned long a, char * b);
+
+void sorterV(unsigned long a, char * b);
 
 #endif
