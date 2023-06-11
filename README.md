@@ -11,14 +11,14 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 - Conforms to strict ISO C with `-pedantic-errors` enabled
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
-- Iterative and procedural sorting with a single function call
+- Iterative and procedural sorting with no inner function calls
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
 - More optimal alternative to merge sort, quicksort and novel sorting algorithms
 - No mean or median numbers calculated
 - No recursive subfunctions
 - No redundant branched or merged numbers in memory
-- Optimal for both pre-sorted best cases and shuffled worst cases
+- Optimal for both pre-sorted best cases and randomized worst cases
 - Optimal for large inputs
 - Predetermined high and low numbers not required
 - Reverses pre-sorted order in a single loop pass
@@ -104,7 +104,7 @@ The function `sorterU()` outputs an array of `char` integers sorted in ascending
 
 The function `sorterV()` outputs an array of `char` integers sorted in descending order.
 
-The first argument variable `a` is an `unsigned long` defined as the length of the array to sort.
+The first argument variable `a` is an `unsigned long` defined as the length of the array of integers to sort.
 
 The second argument variable `b` is defined as the array of integers to sort.
 
@@ -112,7 +112,7 @@ The second argument variable `b` is defined as the array of integers to sort.
 gcc -o c-sorter -pedantic-errors -std=c89 sorter.c test.c
 ```
 
-The output from the command `./c-sorter` is a sorted array.
+The output from the command `./c-sorter` is a sorted array of integers.
 
 ``` console
 ./c-sorter
