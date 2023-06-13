@@ -963,19 +963,30 @@ void sorterQ(unsigned long a, int * b) {
 			a--;
 
 			if (b[a] < b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] >= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] < b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] <= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] >= b[e]) {
-			e++;
 		}
 
 		d ^= 1;

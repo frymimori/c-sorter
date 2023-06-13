@@ -5,9 +5,9 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 
 - All integral data types supported
 - Allocates memory without dynamic memory allocation functions
-- Allows freeing up to 16 bytes of unreferenced variable memory after first loop pass
 - Approximately 3x faster than Bubble Sort with 5x fewer loop iterations
-- Approximately 1.5x faster than Insertion Sort with fewer loop iterations
+- Approximately 2x faster than Insertion Sort with fewer loop iterations
+- Array pass length `n` is decremented rapidly with subsequent loop iterations
 - Compiles with forward-compatible `C89`
 - Conforms to strict ISO C with `-pedantic-errors` enabled
 - Efficient without multithreading or processor-specific vectorization
