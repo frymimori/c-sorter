@@ -362,10 +362,12 @@ void sorterH(unsigned long a, unsigned char * b) {
 		}
 	}
 
+	e = 2;
+
 	while (d == 0) {
 		a = c;
 
-		while (a != 2) {
+		while (a > e) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
@@ -374,6 +376,14 @@ void sorterH(unsigned long a, unsigned char * b) {
 				b[a - 1] = d;
 				d = 1;
 			}
+		}
+
+		if (b[c - 2] >= b[c - 1]) {
+			c--;
+		}
+
+		if (b[e] >= b[e + 1]) {
+			e++;
 		}
 
 		d ^= 1;
