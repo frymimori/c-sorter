@@ -104,19 +104,30 @@ void sorterB(unsigned long a, unsigned long * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -231,19 +242,30 @@ void sorterD(unsigned long a, unsigned int * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -358,19 +380,30 @@ void sorterF(unsigned long a, unsigned short * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -485,19 +518,30 @@ void sorterH(unsigned long a, unsigned char * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -612,19 +656,30 @@ void sorterJ(unsigned long a, long double * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -739,19 +794,30 @@ void sorterL(unsigned long a, double * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -866,19 +932,30 @@ void sorterN(unsigned long a, float * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -993,19 +1070,30 @@ void sorterP(unsigned long a, long * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -1258,19 +1346,30 @@ void sorterT(unsigned long a, short * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
@@ -1385,19 +1484,30 @@ void sorterV(unsigned long a, char * b) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
+				f = b[a];
 				b[a] = b[a - 1];
-				b[a - 1] = d;
+				b[a - 1] = f;
+				d = 1;
+			}
+		}
+
+		if (b[e + 1] <= b[e]) {
+			e++;
+		}
+
+		while (a < c) {
+			a++;
+
+			if (b[a + 1] > b[a]) {
+				f = b[a + 1];
+				b[a + 1] = b[a];
+				b[a] = f;
 				d = 1;
 			}
 		}
 
 		if (b[c - 2] >= b[c - 1]) {
 			c--;
-		}
-
-		if (b[e + 1] <= b[e]) {
-			e++;
 		}
 
 		d ^= 1;
