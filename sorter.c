@@ -1,5 +1,5 @@
 void sorterA(unsigned long a, unsigned long * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned long f;
@@ -7,7 +7,7 @@ void sorterA(unsigned long a, unsigned long * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -15,7 +15,7 @@ void sorterA(unsigned long a, unsigned long * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -29,10 +29,10 @@ void sorterA(unsigned long a, unsigned long * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -47,7 +47,7 @@ void sorterA(unsigned long a, unsigned long * b) {
 }
 
 void sorterB(unsigned long a, unsigned long * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned long f;
@@ -55,7 +55,7 @@ void sorterB(unsigned long a, unsigned long * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -63,7 +63,7 @@ void sorterB(unsigned long a, unsigned long * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -77,10 +77,10 @@ void sorterB(unsigned long a, unsigned long * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -95,7 +95,7 @@ void sorterB(unsigned long a, unsigned long * b) {
 }
 
 void sorterC(unsigned long a, unsigned int * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned int f;
@@ -103,7 +103,7 @@ void sorterC(unsigned long a, unsigned int * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -111,7 +111,7 @@ void sorterC(unsigned long a, unsigned int * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -125,10 +125,10 @@ void sorterC(unsigned long a, unsigned int * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -143,7 +143,7 @@ void sorterC(unsigned long a, unsigned int * b) {
 }
 
 void sorterD(unsigned long a, unsigned int * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned int f;
@@ -151,7 +151,7 @@ void sorterD(unsigned long a, unsigned int * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -159,7 +159,7 @@ void sorterD(unsigned long a, unsigned int * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -173,10 +173,10 @@ void sorterD(unsigned long a, unsigned int * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -191,7 +191,7 @@ void sorterD(unsigned long a, unsigned int * b) {
 }
 
 void sorterE(unsigned long a, unsigned short * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned short f;
@@ -199,7 +199,7 @@ void sorterE(unsigned long a, unsigned short * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -207,7 +207,7 @@ void sorterE(unsigned long a, unsigned short * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -221,10 +221,10 @@ void sorterE(unsigned long a, unsigned short * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -239,7 +239,7 @@ void sorterE(unsigned long a, unsigned short * b) {
 }
 
 void sorterF(unsigned long a, unsigned short * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned short f;
@@ -247,7 +247,7 @@ void sorterF(unsigned long a, unsigned short * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -255,7 +255,7 @@ void sorterF(unsigned long a, unsigned short * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -269,10 +269,10 @@ void sorterF(unsigned long a, unsigned short * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -287,7 +287,7 @@ void sorterF(unsigned long a, unsigned short * b) {
 }
 
 void sorterG(unsigned long a, unsigned char * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned char f;
@@ -295,7 +295,7 @@ void sorterG(unsigned long a, unsigned char * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -303,7 +303,7 @@ void sorterG(unsigned long a, unsigned char * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -317,10 +317,10 @@ void sorterG(unsigned long a, unsigned char * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -335,7 +335,7 @@ void sorterG(unsigned long a, unsigned char * b) {
 }
 
 void sorterH(unsigned long a, unsigned char * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	unsigned char f;
@@ -343,7 +343,7 @@ void sorterH(unsigned long a, unsigned char * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -351,7 +351,7 @@ void sorterH(unsigned long a, unsigned char * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -365,10 +365,10 @@ void sorterH(unsigned long a, unsigned char * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -383,7 +383,7 @@ void sorterH(unsigned long a, unsigned char * b) {
 }
 
 void sorterI(unsigned long a, long double * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	long double f;
@@ -391,7 +391,7 @@ void sorterI(unsigned long a, long double * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -399,7 +399,7 @@ void sorterI(unsigned long a, long double * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -413,10 +413,10 @@ void sorterI(unsigned long a, long double * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -431,7 +431,7 @@ void sorterI(unsigned long a, long double * b) {
 }
 
 void sorterJ(unsigned long a, long double * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	long double f;
@@ -439,7 +439,7 @@ void sorterJ(unsigned long a, long double * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -447,7 +447,7 @@ void sorterJ(unsigned long a, long double * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -461,10 +461,10 @@ void sorterJ(unsigned long a, long double * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -479,7 +479,7 @@ void sorterJ(unsigned long a, long double * b) {
 }
 
 void sorterK(unsigned long a, double * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	double f;
@@ -487,7 +487,7 @@ void sorterK(unsigned long a, double * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -495,7 +495,7 @@ void sorterK(unsigned long a, double * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -509,10 +509,10 @@ void sorterK(unsigned long a, double * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -527,7 +527,7 @@ void sorterK(unsigned long a, double * b) {
 }
 
 void sorterL(unsigned long a, double * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	double f;
@@ -535,7 +535,7 @@ void sorterL(unsigned long a, double * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -543,7 +543,7 @@ void sorterL(unsigned long a, double * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -557,10 +557,10 @@ void sorterL(unsigned long a, double * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -575,7 +575,7 @@ void sorterL(unsigned long a, double * b) {
 }
 
 void sorterM(unsigned long a, float * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	float f;
@@ -583,7 +583,7 @@ void sorterM(unsigned long a, float * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -591,7 +591,7 @@ void sorterM(unsigned long a, float * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -605,10 +605,10 @@ void sorterM(unsigned long a, float * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -623,7 +623,7 @@ void sorterM(unsigned long a, float * b) {
 }
 
 void sorterN(unsigned long a, float * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	float f;
@@ -631,7 +631,7 @@ void sorterN(unsigned long a, float * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -639,7 +639,7 @@ void sorterN(unsigned long a, float * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -653,10 +653,10 @@ void sorterN(unsigned long a, float * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -671,7 +671,7 @@ void sorterN(unsigned long a, float * b) {
 }
 
 void sorterO(unsigned long a, long * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	long f;
@@ -679,7 +679,7 @@ void sorterO(unsigned long a, long * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -687,7 +687,7 @@ void sorterO(unsigned long a, long * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -701,10 +701,10 @@ void sorterO(unsigned long a, long * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -719,7 +719,7 @@ void sorterO(unsigned long a, long * b) {
 }
 
 void sorterP(unsigned long a, long * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	long f;
@@ -727,7 +727,7 @@ void sorterP(unsigned long a, long * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -735,7 +735,7 @@ void sorterP(unsigned long a, long * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -749,10 +749,10 @@ void sorterP(unsigned long a, long * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -767,7 +767,7 @@ void sorterP(unsigned long a, long * b) {
 }
 
 void sorterQ(unsigned long a, int * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	int f;
@@ -775,7 +775,7 @@ void sorterQ(unsigned long a, int * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -783,7 +783,7 @@ void sorterQ(unsigned long a, int * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -797,10 +797,10 @@ void sorterQ(unsigned long a, int * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -815,7 +815,7 @@ void sorterQ(unsigned long a, int * b) {
 }
 
 void sorterR(unsigned long a, int * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	int f;
@@ -823,7 +823,7 @@ void sorterR(unsigned long a, int * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] < b[a - 1]) {
+		if (b[a] > b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -831,7 +831,7 @@ void sorterR(unsigned long a, int * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] > f) {
+				if (b[d] < f) {
 					f = b[d];
 					e = d;
 				}
@@ -845,10 +845,10 @@ void sorterR(unsigned long a, int * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] < b[a - 1]) {
+			if (b[a] > b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -863,7 +863,7 @@ void sorterR(unsigned long a, int * b) {
 }
 
 void sorterS(unsigned long a, short * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	short f;
@@ -871,7 +871,7 @@ void sorterS(unsigned long a, short * b) {
 	while (a != 1) {
 		a--;
 
-		if (b[a] > b[a - 1]) {
+		if (b[a] < b[a - 1]) {
 			d = a - 1;
 			e = d;
 			f = b[d];
@@ -879,7 +879,7 @@ void sorterS(unsigned long a, short * b) {
 			while (d != 0) {
 				d--;
 
-				if (b[d] < f) {
+				if (b[d] > f) {
 					f = b[d];
 					e = d;
 				}
@@ -893,10 +893,10 @@ void sorterS(unsigned long a, short * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
-			if (b[a] > b[a - 1]) {
+			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;
@@ -911,10 +911,58 @@ void sorterS(unsigned long a, short * b) {
 }
 
 void sorterT(unsigned long a, short * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	short f;
+
+	while (a != 1) {
+		a--;
+
+		if (b[a] > b[a - 1]) {
+			d = a - 1;
+			e = d;
+			f = b[d];
+
+			while (d != 0) {
+				d--;
+
+				if (b[d] < f) {
+					f = b[d];
+					e = d;
+				}
+			}
+
+			b[e] = b[a];
+			b[a] = f;
+		}
+	}
+
+	while (d == 0) {
+		a = c;
+
+		while (a != 2) {
+			a--;
+
+			if (b[a] > b[a - 1]) {
+				d = b[a];
+				b[a] = b[a - 1];
+				b[a - 1] = d;
+				d = 1;
+			}
+		}
+
+		d ^= 1;
+	}
+
+	return;
+}
+
+void sorterU(unsigned long a, char * b) {
+	unsigned long c = a - 1;
+	unsigned long d = 0;
+	unsigned long e;
+	char f;
 
 	while (a != 1) {
 		a--;
@@ -941,7 +989,7 @@ void sorterT(unsigned long a, short * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
 			if (b[a] < b[a - 1]) {
@@ -958,8 +1006,8 @@ void sorterT(unsigned long a, short * b) {
 	return;
 }
 
-void sorterU(unsigned long a, char * b) {
-	unsigned long c = a;
+void sorterV(unsigned long a, char * b) {
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	char f;
@@ -989,58 +1037,10 @@ void sorterU(unsigned long a, char * b) {
 	while (d == 0) {
 		a = c;
 
-		while (a != 1) {
+		while (a != 2) {
 			a--;
 
 			if (b[a] > b[a - 1]) {
-				d = b[a];
-				b[a] = b[a - 1];
-				b[a - 1] = d;
-				d = 1;
-			}
-		}
-
-		d ^= 1;
-	}
-
-	return;
-}
-
-void sorterV(unsigned long a, char * b) {
-	unsigned long c = a;
-	unsigned long d = 0;
-	unsigned long e;
-	char f;
-
-	while (a != 1) {
-		a--;
-
-		if (b[a] < b[a - 1]) {
-			d = a - 1;
-			e = d;
-			f = b[d];
-
-			while (d != 0) {
-				d--;
-
-				if (b[d] > f) {
-					f = b[d];
-					e = d;
-				}
-			}
-
-			b[e] = b[a];
-			b[a] = f;
-		}
-	}
-
-	while (d == 0) {
-		a = c;
-
-		while (a != 1) {
-			a--;
-
-			if (b[a] < b[a - 1]) {
 				d = b[a];
 				b[a] = b[a - 1];
 				b[a - 1] = d;

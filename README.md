@@ -6,15 +6,18 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 - All integral data types supported
 - Allocates memory without dynamic memory allocation functions
 - Allows freeing 5-16 bytes of unreferenced variable memory after first loop pass
-- Approximately 3x faster than bubble sort with 5x fewer loop iterations
+- Approximately 3x faster than Bubble Sort with 5x fewer loop iterations
+- Approximately 1.5x faster than Insertion Sort with fewer loop iterations
 - Compiles with forward-compatible `C89`
 - Conforms to strict ISO C with `-pedantic-errors` enabled
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
+- Faster than `O(n(log(n)))` sorting algorithms for most large inputs with randomized integers
 - Iterative and procedural sorting with no inner function calls
+- Lowest space complexity `O(n)`
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
-- More optimal alternative to merge sort, quicksort and novel sorting algorithms
+- More optimal alternative to Merge Sort, Quicksort and novel sorting algorithms
 - No mean or median numbers calculated
 - No recursive subfunctions
 - No redundant branched or merged numbers in memory
@@ -48,11 +51,11 @@ int main(void) {
 	unsigned long a = 100;
 	unsigned char b[100] = {24, 132, 22, 217, 185, 9, 65, 245, 147, 88, 100, 230, 81, 77, 247, 62, 181, 51, 200, 204, 162, 155, 4, 214, 121, 41, 113, 125, 255, 234, 39, 198, 33, 69, 75, 204, 34, 219, 228, 166, 241, 189, 95, 122, 63, 74, 183, 222, 37, 27, 196, 246, 169, 177, 93, 207, 226, 251, 20, 46, 93, 207, 98, 187, 180, 158, 197, 11, 236, 82, 99, 208, 120, 148, 110, 61, 15, 90, 143, 130, 235, 60, 10, 87, 206, 77, 119, 254, 213, 227, 144, 24, 132, 217, 0, 73, 33, 197, 11, 236};
 	sorterH(a, b);
-	a--;
-	printf("%u", b[a]);
+	a = 0;
+	printf("%u", b[0]);
 
-	while (a != 0) {
-		a--;
+	while (a != 99) {
+		a++;
 		printf(", %u", b[a]);
 	}
 
