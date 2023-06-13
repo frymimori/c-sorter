@@ -46,7 +46,7 @@ void sorterA(unsigned long a, unsigned long * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -104,7 +104,7 @@ void sorterB(unsigned long a, unsigned long * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -162,7 +162,7 @@ void sorterC(unsigned long a, unsigned int * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -220,7 +220,7 @@ void sorterD(unsigned long a, unsigned int * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -278,7 +278,7 @@ void sorterE(unsigned long a, unsigned short * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -336,7 +336,7 @@ void sorterF(unsigned long a, unsigned short * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -394,7 +394,7 @@ void sorterG(unsigned long a, unsigned char * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -452,7 +452,7 @@ void sorterH(unsigned long a, unsigned char * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -510,7 +510,7 @@ void sorterI(unsigned long a, long double * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -568,7 +568,7 @@ void sorterJ(unsigned long a, long double * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -626,7 +626,7 @@ void sorterK(unsigned long a, double * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -684,7 +684,7 @@ void sorterL(unsigned long a, double * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -742,7 +742,7 @@ void sorterM(unsigned long a, float * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -800,7 +800,7 @@ void sorterN(unsigned long a, float * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -858,7 +858,7 @@ void sorterO(unsigned long a, long * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -916,7 +916,7 @@ void sorterP(unsigned long a, long * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -974,7 +974,7 @@ void sorterQ(unsigned long a, int * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -1032,7 +1032,7 @@ void sorterR(unsigned long a, int * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -1090,7 +1090,7 @@ void sorterS(unsigned long a, short * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -1148,7 +1148,7 @@ void sorterT(unsigned long a, short * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
@@ -1206,7 +1206,7 @@ void sorterU(unsigned long a, char * b) {
 			c--;
 		}
 
-		if (b[e] <= b[e + 1]) {
+		if (b[e + 1] >= b[e]) {
 			e++;
 		}
 
@@ -1264,7 +1264,7 @@ void sorterV(unsigned long a, char * b) {
 			c--;
 		}
 
-		if (b[e] >= b[e + 1]) {
+		if (b[e + 1] <= b[e]) {
 			e++;
 		}
 
