@@ -1103,69 +1103,28 @@ void sorterP(unsigned long a, long * b) {
 }
 
 void sorterQ(unsigned long a, int * b) {
-	unsigned long c = a;
+	unsigned long c = a - 1;
 	unsigned long d = 0;
 	unsigned long e;
 	int f;
 
-	while (a != 1) {
+	while (a != 0) {
+		d = a;
+		e = a;
+		f = b[a];
+
+		while (d != 0) {
+			d--;
+
+			if (b[d] > f) {
+				f = b[d];
+				e = d;
+			}
+		}
+
+		b[e] = b[a];
+		b[a] = f;
 		a--;
-
-		if (b[a] < b[a - 1]) {
-			d = a - 1;
-			e = d;
-			f = b[d];
-
-			while (d != 0) {
-				d--;
-
-				if (b[d] > f) {
-					f = b[d];
-					e = d;
-				}
-			}
-
-			b[e] = b[a];
-			b[a] = f;
-		}
-	}
-
-	e = 1;
-
-	while (d == 0) {
-		a = c;
-
-		while (a > e) {
-			a--;
-
-			if (b[a] < b[a - 1]) {
-				f = b[a];
-				b[a] = b[a - 1];
-				b[a - 1] = f;
-				d = 1;
-			}
-		}
-
-		if (b[e - 2] <= b[e - 1]) {
-			e++;
-		}
-
-		while (a < c) {
-			a++;
-
-			if (b[a + 1] < b[a]) {
-				f = b[a + 1];
-				b[a + 1] = b[a];
-				b[a] = f;
-				d = 1;
-			}
-		}
-
-		if (b[c - 2] <= b[c - 1]) {
-			c--;
-		}
-
-		d ^= 1;
 	}
 
 	return;
