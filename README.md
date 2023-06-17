@@ -10,19 +10,16 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 - Creates and concatenates sorted partitions quickly by repeatedly shifting high and low values
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
-- Fast time complexity approximation of `O((n(log(√n)))+n)`
-- Faster than `O(n(log(n)))` sorting algorithms for most large inputs with randomized integers
-- Faster with fewer operations when compared to Bubble Sort, Insertion Sort, Merge Sort and Quicksort
+- Fast time complexity approximation of `O((n(log(√n)))+n)` compared to `O(n(log(n)))`
 - Iterative and procedural sorting with no inner function calls
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
 - No mean or median numbers calculated
 - No recursive subfunctions
-- No redundant branched or merged numbers in memory with low space complexity `O(n+8)`
+- No redundant branched or merged elements in memory with low space complexity
 - Optimal for both pre-sorted best cases and randomized worst cases
 - Optimal for large inputs
 - Predetermined high and low numbers not required
-- Reverses pre-sorted order in a single loop pass
 - Variants for both ascending and descending sort order
 - Variants for both signed and unsigned data types
 
