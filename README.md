@@ -15,7 +15,7 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 - Fast time complexity approximation of `O((n(log(√n)))+n)`
 - Faster than `O(n(log(n)))` sorting algorithms for most large inputs with randomized integers
 - Iterative and procedural sorting with no inner function calls
-- Lowest space complexity `O(n)`
+- Lowest space complexity `O(~n)`
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
 - More optimal alternative to Merge Sort, Quicksort and novel sorting algorithms
