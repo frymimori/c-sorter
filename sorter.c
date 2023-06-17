@@ -1,3 +1,50 @@
+/*
+new algorithm concept for v1.0.5
+
+numbers
+78 14 36 91 86 47 81
+12 passes for 14 elements
+2 steps
+
+1. sorting elements incrementing and decrementing both ends until repetitions of #1 doesn't sort elements
+18 14 36 19 86 47 87
+2. sorting adjacent elements with alternating 0|1 starting index
+1 18 34 16 89 46 78 7
+
+1.
+sorts
+11 73 41 68 94 68 87
+2.
+sorts
+11 37 14 68 49 68 78
+
+1.
+sorts
+11 36 14 68 49 78 78
+2.
+sorts
+1 13 16 46 48 79 78 8
+
+1.
+sorts
+11 31 64 46 87 97 88
+2.
+sorts
+11 13 46 46 78 79 88
+
+1.
+stops sorting (skips 1)
+11 13 46 46 78 79 88
+2.
+1 11 34 46 67 78 89 8
+
+2.
+11 13 44 66 77 88 89
+
+2.
+11 13 44 66 77 88 89
+*/
+
 void sorterA(unsigned long a, unsigned long * b) {
 	unsigned long c = a >> 2;
 	unsigned long d;
