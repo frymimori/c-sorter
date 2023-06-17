@@ -5,23 +5,20 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 
 - All integral data types supported
 - Allocates memory without dynamic memory allocation functions
-- Approximately 3x faster than Bubble Sort with 5x fewer loop iterations
-- Approximately 2x faster than Insertion Sort with fewer loop iterations
-- Array pass length `n` is decremented rapidly with subsequent loop iterations
 - Compiles with forward-compatible `C89`
 - Conforms to strict ISO C with `-pedantic-errors` enabled
+- Creates and concatenates sorted partitions quickly by repeatedly shifting high and low values
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
 - Fast time complexity approximation of `O((n(log(√n)))+n)`
 - Faster than `O(n(log(n)))` sorting algorithms for most large inputs with randomized integers
+- Faster with fewer operations when compared to Bubble Sort, Insertion Sort, Merge Sort and Quicksort
 - Iterative and procedural sorting with no inner function calls
-- Lowest space complexity `O(~n)`
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
-- More optimal alternative to Merge Sort, Quicksort and novel sorting algorithms
 - No mean or median numbers calculated
 - No recursive subfunctions
-- No redundant branched or merged numbers in memory
+- No redundant branched or merged numbers in memory with low space complexity `O(n+8)`
 - Optimal for both pre-sorted best cases and randomized worst cases
 - Optimal for large inputs
 - Predetermined high and low numbers not required

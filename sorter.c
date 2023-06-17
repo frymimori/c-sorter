@@ -626,6 +626,10 @@ void sorterV103(long a, long * b) {
 	if (a > 1) {
 		if (c > 100) {
 			c = 100;
+		} else {
+			if (c == 0) {
+				c = 1;
+			}
 		}
 
 		d = a % c;
@@ -636,7 +640,7 @@ void sorterV103(long a, long * b) {
 
 		e = 1;
 
-		while (d != e) {
+		while (d > e) {
 			f = a;
 			g = d;
 
