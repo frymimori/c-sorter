@@ -10,7 +10,6 @@ Create ascending and descending ordered arrays using C with a fast and unique hy
 - Creates and concatenates sorted partitions quickly by repeatedly shifting high and low values
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
-- Fast time complexity approximation of `O((n(log(√n)))+n)` compared to `O(n(log(n)))`
 - Iterative and procedural sorting with no inner function calls
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
