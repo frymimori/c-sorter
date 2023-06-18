@@ -3894,3 +3894,80 @@ void sorterV(unsigned long a, char * b) {
 
 	return;
 }
+
+/* Updating with non-recursive middle pivot point. */
+
+void sorterv105(unsigned long a, unsigned char * b) {
+	unsigned long c = a;
+	unsigned long d;
+	unsigned char e = 0;
+	unsigned char f;
+
+	if (a > 2) {
+		while (e == 0) {
+			a--;
+			e = 1;
+
+			if (b[1] < b[0]) {
+				e = 0;
+				f = b[1];
+				b[1] = b[0];
+				b[0] = f;
+			}
+
+			if (b[a - 1] > b[a]) {
+				e = 0;
+				f = b[a - 1];
+				b[a - 1] = b[a];
+				b[a] = f;
+			}
+
+			if (b[0] > b[a]) {
+				e = 0;
+				f = b[0];
+				b[0] = b[a];
+				b[a] = f;
+			}
+
+			a--;
+			d = 1;
+
+			while (a > d) {
+				if (b[a + 1] < b[a]) {
+					e = 0;
+					f = b[a + 1];
+					b[a + 1] = b[a];
+					b[a] = f;
+				}
+
+				if (b[a] < b[d]) {
+					e = 0;
+					f = b[a];
+					b[a] = b[d];
+					b[d] = f;
+				}
+
+				if (b[d - 1] > b[d]) {
+					e = 0;
+					f = b[d - 1];
+					b[d - 1] = b[d];
+					b[d] = f;
+				}
+
+				if (b[a] < b[d]) {
+					e = 0;
+					f = b[a];
+					b[a] = b[d];
+					b[d] = f;
+				}
+
+				a--;
+				d++;
+			}
+
+			a = c;
+		}
+	}
+
+	return;
+}
