@@ -45,6 +45,4 @@ void sorterU(unsigned long a, char * b);
 
 void sorterV(unsigned long a, char * b);
 
-void sorterv105(unsigned long a, unsigned char * b);
-
 #endif
