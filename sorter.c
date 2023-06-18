@@ -1297,10 +1297,7 @@ void sorterH(unsigned long a, unsigned char * b) {
 				f += c;
 			}
 
-			if (
-				a != (d + f) ||
-				e == 0
-			) {
+			if (a != (d + f)) {
 				f += c;
 
 				if (b[f - 1] < b[f]) {
