@@ -1,24 +1,28 @@
 ## C Sorter
 
 #### Description
-Create ascending and descending ordered arrays using C with a fast and unique hybrid sorting algorithm.
+Create ascending and descending ordered arrays using C with a fast and unique sorting algorithm.
 
 - All integral data types supported
 - Allocates memory without dynamic memory allocation functions
 - Compiles with forward-compatible `C89`
 - Conforms to strict ISO C with `-pedantic-errors` enabled
-- Creates and concatenates sorted partitions quickly by repeatedly shifting high and low values
+- Constant additional memory space compared to implementation-defined memory space in `qsort()`
+- Creates and concatenates sorted partitions quickly by repeatedly swapping and shifting median indices
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
-- Iterative and procedural sorting with no inner function calls
+- Faster than unstable `O(n^2)` sorting algorithms
+- Iterative and procedural sorting with no recursive inner function calls
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
+- No additional merged branches in memory
+- No high and low values calculated in concatenated arrays
 - No mean or median numbers calculated
-- No recursive subfunctions
-- No redundant branched or merged elements in memory with low space complexity
 - Optimal for both pre-sorted best cases and randomized worst cases
 - Optimal for large inputs
-- Predetermined high and low numbers not required
+- Optimal stable sorting algorithm with both `O(1)` space complexity and `O(n(log(n)))` time complexity
+- Stable sorting guarantees sequential order of duplicate values
+- Unique without combining multiple existing sorting algorithms with input size conditionals
 - Variants for both ascending and descending sort order
 - Variants for both signed and unsigned data types
 
