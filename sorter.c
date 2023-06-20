@@ -38,84 +38,84 @@ void sorterA(unsigned long a, unsigned long * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -169,84 +169,84 @@ void sorterB(unsigned long a, unsigned long * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -300,84 +300,84 @@ void sorterC(unsigned long a, unsigned int * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -431,84 +431,84 @@ void sorterD(unsigned long a, unsigned int * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -562,84 +562,84 @@ void sorterE(unsigned long a, unsigned short * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -693,84 +693,84 @@ void sorterF(unsigned long a, unsigned short * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -824,84 +824,84 @@ void sorterG(unsigned long a, unsigned char * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -955,84 +955,84 @@ void sorterH(unsigned long a, unsigned char * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -1086,84 +1086,84 @@ void sorterI(unsigned long a, long double * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -1217,84 +1217,84 @@ void sorterJ(unsigned long a, long double * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -1348,84 +1348,84 @@ void sorterK(unsigned long a, double * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -1479,84 +1479,84 @@ void sorterL(unsigned long a, double * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -1610,84 +1610,84 @@ void sorterM(unsigned long a, float * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -1741,84 +1741,84 @@ void sorterN(unsigned long a, float * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -1872,84 +1872,84 @@ void sorterO(unsigned long a, long * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -2003,84 +2003,84 @@ void sorterP(unsigned long a, long * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -2134,84 +2134,84 @@ void sorterQ(unsigned long a, int * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -2265,84 +2265,84 @@ void sorterR(unsigned long a, int * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -2396,84 +2396,84 @@ void sorterS(unsigned long a, short * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -2527,84 +2527,84 @@ void sorterT(unsigned long a, short * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -2658,84 +2658,84 @@ void sorterU(unsigned long a, char * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] > b[f]) {
-					while (b[f - 1] > b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] > b[g]) {
+					while (b[g - 1] > b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] > i
+							g != h &&
+							b[g - 1] > i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] < i
+							g != h &&
+							b[g + 1] < i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
@@ -2789,84 +2789,84 @@ void sorterV(unsigned long a, char * b) {
 
 		while (e != 0) {
 			e >>= 1;
-			f = 0;
-			g = e;
+			f = e;
+			g = 0;
 
-			while (g != 0) {
-				f += c;
-				g--;
+			while (f != 0) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c << 1;
-						f = h - c;
+						g = h - c;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - c;
+						b[g] = i;
+						g = (h + 1) - c;
 					}
 				}
 
-				f += c;
+				f--;
+				g += c;
 			}
 
-			if (a != (d + f)) {
-				f += c;
+			if (a != (d + g)) {
+				g += c;
 
-				if (b[f - 1] < b[f]) {
-					while (b[f - 1] < b[f]) {
-						h = f - c;
-						i = b[f];
-						b[f] = b[f - 1];
-						f--;
+				if (b[g - 1] < b[g]) {
+					while (b[g - 1] < b[g]) {
+						h = g - c;
+						i = b[g];
+						b[g] = b[g - 1];
+						g--;
 
 						while (
-							f != h &&
-							b[f - 1] < i
+							g != h &&
+							b[g - 1] < i
 						) {
-							b[f] = b[f - 1];
-							f--;
+							b[g] = b[g - 1];
+							g--;
 						}
 
-						b[f] = i;
+						b[g] = i;
 						h += c + d;
-						f = h - d;
+						g = h - d;
 						h--;
-						i = b[f];
+						i = b[g];
 
 						while (
-							f != h &&
-							b[f + 1] > i
+							g != h &&
+							b[g + 1] > i
 						) {
-							b[f] = b[f + 1];
-							f++;
+							b[g] = b[g + 1];
+							g++;
 						}
 
-						b[f] = i;
-						f = (h + 1) - d;
+						b[g] = i;
+						g = (h + 1) - d;
 					}
 				}
 
