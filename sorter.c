@@ -50,7 +50,7 @@ void sorterA(unsigned long a, unsigned long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -90,7 +90,7 @@ void sorterA(unsigned long a, unsigned long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -181,7 +181,7 @@ void sorterB(unsigned long a, unsigned long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -221,7 +221,7 @@ void sorterB(unsigned long a, unsigned long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -312,7 +312,7 @@ void sorterC(unsigned long a, unsigned int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -352,7 +352,7 @@ void sorterC(unsigned long a, unsigned int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -443,7 +443,7 @@ void sorterD(unsigned long a, unsigned int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -483,7 +483,7 @@ void sorterD(unsigned long a, unsigned int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -574,7 +574,7 @@ void sorterE(unsigned long a, unsigned short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -614,7 +614,7 @@ void sorterE(unsigned long a, unsigned short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -705,7 +705,7 @@ void sorterF(unsigned long a, unsigned short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -745,7 +745,7 @@ void sorterF(unsigned long a, unsigned short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -836,7 +836,7 @@ void sorterG(unsigned long a, unsigned char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -876,7 +876,7 @@ void sorterG(unsigned long a, unsigned char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -967,7 +967,7 @@ void sorterH(unsigned long a, unsigned char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1007,7 +1007,7 @@ void sorterH(unsigned long a, unsigned char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1098,7 +1098,7 @@ void sorterI(unsigned long a, long double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1138,7 +1138,7 @@ void sorterI(unsigned long a, long double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1229,7 +1229,7 @@ void sorterJ(unsigned long a, long double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1269,7 +1269,7 @@ void sorterJ(unsigned long a, long double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1360,7 +1360,7 @@ void sorterK(unsigned long a, double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1400,7 +1400,7 @@ void sorterK(unsigned long a, double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1491,7 +1491,7 @@ void sorterL(unsigned long a, double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1531,7 +1531,7 @@ void sorterL(unsigned long a, double * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1622,7 +1622,7 @@ void sorterM(unsigned long a, float * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1662,7 +1662,7 @@ void sorterM(unsigned long a, float * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1753,7 +1753,7 @@ void sorterN(unsigned long a, float * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1793,7 +1793,7 @@ void sorterN(unsigned long a, float * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1884,7 +1884,7 @@ void sorterO(unsigned long a, long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -1924,7 +1924,7 @@ void sorterO(unsigned long a, long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2015,7 +2015,7 @@ void sorterP(unsigned long a, long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2055,7 +2055,7 @@ void sorterP(unsigned long a, long * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2146,7 +2146,7 @@ void sorterQ(unsigned long a, int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2186,7 +2186,7 @@ void sorterQ(unsigned long a, int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2277,7 +2277,7 @@ void sorterR(unsigned long a, int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2317,7 +2317,7 @@ void sorterR(unsigned long a, int * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2408,7 +2408,7 @@ void sorterS(unsigned long a, short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2448,7 +2448,7 @@ void sorterS(unsigned long a, short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2539,7 +2539,7 @@ void sorterT(unsigned long a, short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2579,7 +2579,7 @@ void sorterT(unsigned long a, short * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2670,7 +2670,7 @@ void sorterU(unsigned long a, char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2710,7 +2710,7 @@ void sorterU(unsigned long a, char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2801,7 +2801,7 @@ void sorterV(unsigned long a, char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
@@ -2841,7 +2841,7 @@ void sorterV(unsigned long a, char * b) {
 						h = f - c;
 						i = b[f];
 						b[f] = b[f - 1];
-						f -= 1;
+						f--;
 
 						while (
 							f != h &&
