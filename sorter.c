@@ -943,9 +943,9 @@ void sorterH(unsigned long a, unsigned char * b) {
 			d == 3 &&
 			b[a - 2] < b[a - 1]
 		) {
-			i = b[a - 1];
-			b[a - 1] = b[a];
-			b[a] = i;
+			i = b[a - 2];
+			b[a - 2] = b[a - 1];
+			b[a - 1] = i;
 		}
 
 		e--;
