@@ -11,7 +11,7 @@ Create ascending and descending ordered arrays using C with a fast and unique so
 - Creates and concatenates sorted partitions quickly by repeatedly swapping and shifting median indices
 - Efficient without multithreading or processor-specific vectorization
 - Fast sorting speed without relying on compiler optimization
-- Faster than unstable `O(n^2)` sorting algorithms
+- Faster than `O(n^2)` sorting algorithms
 - Iterative and procedural sorting with no recursive inner function calls
 - Memory-safe with defined behavior
 - Minified and readable code with single-letter variable names
